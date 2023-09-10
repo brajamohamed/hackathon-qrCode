@@ -1,0 +1,6 @@
+/* Dark mode styles */
+:root,
+.parent {
+  --bg-color: #333;
+  --text-color: #fff;
+}

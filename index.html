@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QR Code Generator</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <link id="toggleMode" rel="stylesheet" href="" />
+  </head>
+  <body>
+    <div id="parent" class="container-md border parent">
+      <div id="toggle">
+        <div>
+          <button>
+            <img id="light" src="./icons8-light-48.png" alt="l" />
+          </button>
+        </div>
+        <div>
+          <button>
+            <img id="dark" src="./icons8-light-off-48.png" alt="d" />
+          </button>
+        </div>
+      </div>
+      <div class="row text-center">
+        <h1>QR Code Genarator</h1>
+      </div>
+      <div class="row">
+        <div id="col1" class="col-lg-6 p-4">
+          <div class="row mb-3">
+            <label for="content"> Enter the Data: </label>
+            <input
+              type="text"
+              name="content"
+              id="content"
+              placeholder="Enter your data here..."
+            />
+          </div>
+
+          <div class="row mb-3 widthDiv inputDiv">
+            <label for="width"> Enter the Width: </label>
+            <input
+              type="number"
+              name="width"
+              id="width"
+              placeholder="Enter width"
+            />
+          </div>
+
+          <div class="row mb-3 heightDiv inputDiv">
+            <label for="height"> Height: </label>
+            <input type="number" name="height" id="height" />
+          </div>
+
+          <div class="row mb-3 qrColorDiv inputDiv">
+            <label for="qrColor">
+              QR Color:
+              <input
+                type="color"
+                name="qrColor"
+                class="colorSelectorEle"
+                id="qrColor"
+              />
+            </label>
+          </div>
+
+          <div class="row mb-3 bgColorDiv inputDiv">
+            <label for="bgColor">
+              Background Color:
+              <input
+                type="color"
+                name="bgColor"
+                class="colorSelectorEle"
+                id="bgColor"
+                value="#e5e7ff"
+              />
+            </label>
+          </div>
+
+          <div id="formatDiv" class="row mb-3">
+            <label for="format" id="formatLable"> Format:</label>
+            <select name="format" id="format">
+              <option disabled selected value="">Select image format</option>
+              <option value="jgp">JPG</option>
+              <option value="png">PNG</option>
+              <option value="svg">SVG</option>
+            </select>
+          </div>
+          <div class="row mb-3">
+            <button class="generateQr" id="generate">Generate</button>
+          </div>
+          <div class="row mb--3">
+            <button class="downloadQr" id="download">Download</button>
+          </div>
+        </div>
+
+        <div id="col2" class="col-lg-6 qr">
+          <div class="row mt-3 kmb-3">
+            <div class="col">
+              <img id="qrImg" src="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

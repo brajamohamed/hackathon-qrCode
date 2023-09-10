@@ -1,0 +1,37 @@
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.qr {
+  min-width: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+}
+.parent {
+  position: relative;
+}
+#toggle {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 100px;
+  border: 1px solid;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: blueviolet;
+}
+#toggle {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#toggle > div > button {
+  background-color: transparent;
+  border: none;
+}
+#col2 {
+  min-height: 400px;
+}
